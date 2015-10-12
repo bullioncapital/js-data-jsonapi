@@ -1,0 +1,33 @@
+{
+  "name": "@abx/js-data-jsonapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "browserify": "^11.1.0",
+    "js-data": "^2.3.0",
+    "js-data-http": "^2.1.0",
+    "lodash": "^3.10.1",
+    "serve": "^1.4.0",
+    "watchify": "^3.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "angular": "browserify templates/angular.js -o dist/js-data-jsonapi.angular.js",
+    "bundle": "browserify index.js -o bundle.js",
+    "watch": "watchify index.js -o bundle.js",
+    "serve": "serve",
+    "prestart": "npm run bundle",
+    "start": "npm run serve & npm run watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bullioncapital/js-data-jsonapi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bullioncapital/js-data-jsonapi/issues"
+  },
+  "homepage": "https://github.com/bullioncapital/js-data-jsonapi#readme"
+}
