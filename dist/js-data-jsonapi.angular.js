@@ -85,9 +85,7 @@ DSJsonApiAdapter.deserialize = function(resourceConfig, response){
 DSJsonApiAdapter.queryTransform = function(resourceConfig, params) {
     var returnParams = {};
 
-    if( params.where ){
-        _.set(returnParams, 'filter.' + resourceConfig.name, {});
-    }
+    if( params.offset ) _.set(returnParams, 'offset', params.offset);
 
     return returnParams;
 };
