@@ -86,6 +86,12 @@ DSJsonApiAdapter.queryTransform = function(resourceConfig, params) {
     var returnParams = {};
 
     if( params.offset ) _.set(returnParams, 'offset', params.offset);
+    if( params.limit ) _.set(returnParams, 'limit', params.limit);
+    if( params.where ) {
+        _.forEach( params.where, function( value, key ){
+            _.set(returnParams, key, value);
+        });
+    }
 
     return returnParams;
 };
