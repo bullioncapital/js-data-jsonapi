@@ -122,10 +122,13 @@ function deserializeData(resourceConfig, data){
 
     // Move the attributes to the top level
     _.extend(data, data.attributes);
-    delete data.attributes;
 
     // Remove the type
+    if (!data.attributes.type) {
     delete data.type;
+    }
+
+    delete data.attributes;
 
     return data;
 }
