@@ -11,6 +11,11 @@
     "serve": "^1.4.0",
     "watchify": "^3.4.0"
   },
+  "standard": {
+    "globals": [
+        "_"    
+    ]
+  },
   "devDependencies": {},
   "scripts": {
     "angular": "browserify templates/angular.js -o dist/js-data-jsonapi.angular.js",
